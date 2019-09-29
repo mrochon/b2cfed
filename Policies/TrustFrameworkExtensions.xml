@@ -72,7 +72,7 @@
             <!-- Update the Client ID below to the Application ID -->
             <Item Key="client_id">47fc1730-224f-4a72-915c-408b9369241a</Item>
             <Item Key="response_types">code</Item>
-            <Item Key="scope">openid</Item>
+            <Item Key="scope">openid profile email</Item>
             <Item Key="response_mode">form_post</Item>
             <Item Key="HttpBinding">POST</Item>
             <Item Key="UsePolicyInRedirectUri">false</Item>
@@ -96,6 +96,7 @@
             <OutputClaim ClaimTypeReferenceId="displayName" PartnerClaimType="name" />
             <OutputClaim ClaimTypeReferenceId="authenticationSource" DefaultValue="socialIdpAuthentication" AlwaysUseDefaultValue="true" />
             <OutputClaim ClaimTypeReferenceId="identityProvider" PartnerClaimType="iss" />
+            <OutputClaim ClaimTypeReferenceId="email" PartnerClaimType="email" />
           </OutputClaims>
           <OutputClaimsTransformations>
             <OutputClaimsTransformation ReferenceId="CreateRandomUPNUserName"/>
@@ -173,7 +174,7 @@
           <DisplayName>Validate user input data and return loyaltyNumber claim</DisplayName>
           <Protocol Name="Proprietary" Handler="Web.TPEngine.Providers.RestfulProvider, Web.TPEngine, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null" />
           <Metadata>
-            <Item Key="ServiceUrl">https://b2capis.azurewebsites.net/hrd/isaad</Item>
+            <Item Key="ServiceUrl">https://b2capis.azurewebsites.net/hrd/getdomain</Item>
             <Item Key="AuthenticationType">None</Item>
             <Item Key="SendClaimsIn">QueryString</Item>
             <Item Key="AllowInsecureAuthInProduction">true</Item>                
