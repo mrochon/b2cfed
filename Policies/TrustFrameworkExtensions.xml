@@ -183,6 +183,7 @@
           </InputClaims>
           <OutputClaims>
             <OutputClaim ClaimTypeReferenceId="aadDomain" PartnerClaimType="aadDomain" />
+            <OutputClaim ClaimTypeReferenceId="userCode" />
           </OutputClaims>
           <UseTechnicalProfileForSessionManagement ReferenceId="SM-Noop" />
         </TechnicalProfile>
